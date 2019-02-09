@@ -1,0 +1,14 @@
+{
+  "name": "rehab",
+  "version": "0.0.0",
+  "description": "Rehab",
+  "scripts": {
+    "start": "node server"
+  },
+  "engines": {
+    "node": "~6.10.x"
+  },
+  "author": {
+    "name": ""
+  }
+}

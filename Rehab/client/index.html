@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel='stylesheet' href='css/fullcalendar.css' />
+    <link rel='stylesheet' href='css/bootstrap.css' />
+        <link rel='stylesheet' href='css/jquery-ui.css' />
+
+    <script src='js/jquery.js'></script>
+    <script src='js/jquery-ui.js'></script>
+
+    <script src='js/moment.js'></script>
+   
+    <script src='js/fullcalendar.js'></script>
+    <script src='js/fullcalendar/locale/es.js'></script>
+    <script src='js/bootstrap.js'></script>
+    <script src='js/knockout.js'></script>
+    <script src='js/knockout-sortable.js'></script>
+
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-3">
+            <!--<div data-bind="foreach: events" id="extenal-events">
+              <div class='fc-event' data-bind="text: title,draggable:title , attr:{'data-event':JSON.stringify({'title':title , id:123465, solicitud:'a23154832asfadf'}), 'data-duration':'00:20'} "    style=" border: solid; border-width: medium;"></div>
+            </div>
+            -->
+            <div class="row">
+                <select class="form-control" data-bind="options:$root.buzones,
+                                                                        optionsText: 'nombre',
+                                                                        optionsValue: $data,
+                                                                        value:buzon">
+                </select>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div id='fisio1'></div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" style="width:90%;" role="document">
+            <div class="modal-content" data-bind="with:eventModal">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body" >
+                   <div class="col-md-3">
+                        <div class="input-group" >
+                                <span class="input-group-addon" id="basic-addon2">title</span>
+                                <input type="text" class="form-control"  placeholder="codigo" data-bind="textInput:title">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="input-group" >
+                                <span class="input-group-addon" id="basic-addon2">start</span>
+                                <input type="text" class="form-control"  placeholder="codigo" data-bind="textInput:startMoment">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="input-group" >
+                                <span class="input-group-addon" id="basic-addon2">end</span>
+                                <input type="text" class="form-control"  placeholder="codigo" data-bind="textInput:endMoment">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="input-group" >
+                                <span class="input-group-addon" id="basic-addon2">description</span>
+                                <input type="text" class="form-control"  placeholder="codigo" data-bind="textInput:description">
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bind="click:save">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+   
+    <script src='js/ko/Model/Buzon.js'></script>
+    <script src='js/ko/VM/ko.js'></script>
+
+  
+
+</body>
+
+</html>

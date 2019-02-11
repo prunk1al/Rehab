@@ -1,14 +1,16 @@
 {
-  "name": "rehab",
+  "name": "chat-example",
   "version": "0.0.0",
-  "description": "Rehab",
-  "scripts": {
-    "start": "node server"
-  },
-  "engines": {
-    "node": "~6.10.x"
-  },
-  "author": {
-    "name": ""
+  "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
+  "main": "server.js",
+  "repository": "",
+  "author": "Mostafa Eweda <mo.eweda@gmail.com>",
+  "dependencies": {
+    "async": "~0.2.8",
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.7",
+    "redis": "^2.8.0"
   }
 }
